@@ -10,6 +10,8 @@ app.secret_key = b'poornima123456789'
 con = sql.connect('pizzas.db')
 cursor = con.cursor()
 con.execute('CREATE TABLE IF NOT EXISTS users (username varchar unique, password varchar);')
+con.execute('CREATE TABLE IF NOT EXISTS pizzas (pizza_id integer primary key, );')
+con.execute('CREATE TABLE IF NOT EXISTS orders ();')
 
 @app.route('/')
 def index():
